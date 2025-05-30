@@ -5,17 +5,17 @@ import Hero from "./components/Hero"
 import Services from "./components/Services"
 import About from "./components/About"
 import Features from "./components/Features"
-import Team from "./components/Team"
+import Department from "./components/Department"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
       <About />
+      <Services />
       <Features />
-      <Team />
+      <Department />
       <Contact />
       <Footer />
     </main>

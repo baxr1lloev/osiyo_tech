@@ -17,17 +17,17 @@ export default function Header() {
             <a href="#home" className="text-gray-700 hover:text-blue-600 font-medium">
               Home
             </a>
-            <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium">
-              Services
-            </a>
             <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium">
               About
+            </a>
+            <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium">
+              Services
             </a>
             <a href="#solutions" className="text-gray-700 hover:text-blue-600 font-medium">
               Solutions
             </a>
-            <a href="#team" className="text-gray-700 hover:text-blue-600 font-medium">
-              Team
+            <a href="#department" className="text-gray-700 hover:text-blue-600 font-medium">
+              Department
             </a>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium">
               Contact
@@ -62,8 +62,8 @@ export default function Header() {
               <a href="#solutions" className="text-gray-700 hover:text-blue-600 font-medium">
                 Solutions
               </a>
-              <a href="#team" className="text-gray-700 hover:text-blue-600 font-medium">
-                Team
+              <a href="#department" className="text-gray-700 hover:text-blue-600 font-medium">
+                Department
               </a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium">
                 Contact
