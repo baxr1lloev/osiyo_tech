@@ -117,13 +117,10 @@ export default function Department() {
   }
 
   const handleViewDepartmentNews = (department, e) => {
-    e.stopPropagation() // Prevent department click
-    // Navigate to news section with department filter
+    e.stopPropagation() 
     router.push(`/#news`)
 
-    // After navigation, trigger the department filter
     setTimeout(() => {
-      // Dispatch a custom event to trigger department filter
       window.dispatchEvent(
         new CustomEvent("filterDepartmentNews", {
           detail: { departmentId: department.id },
@@ -135,7 +132,6 @@ export default function Department() {
   return (
     <section id="department" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Departments</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -143,7 +139,6 @@ export default function Department() {
           </p>
         </div>
 
-        {/* Departments Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {departments.map((department, index) => (
             <div
@@ -154,7 +149,6 @@ export default function Department() {
               className="group cursor-pointer transform transition-all duration-300 hover:-translate-y-2"
             >
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
-                {/* Department Header */}
                 <div className={`bg-gradient-to-r ${department.color} p-6 text-white relative overflow-hidden`}>
                   <div className="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12">
                     {department.icon}
@@ -165,7 +159,6 @@ export default function Department() {
                   </div>
                 </div>
 
-                {/* Team Members */}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
                     <Users className="w-5 h-5 text-gray-500 dark:text-gray-400" />
@@ -188,7 +181,6 @@ export default function Department() {
                     ))}
                   </div>
 
-                  {/* News Count & Actions */}
                   <div className="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-gray-500 dark:text-gray-400" />
@@ -224,7 +216,6 @@ export default function Department() {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Want to Join Our Team?</h3>
