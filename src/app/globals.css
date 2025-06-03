@@ -1,2 +1,45 @@
-
 @import "tailwindcss";
+
+
+
+@keyframes rotate {
+  25% {
+    transform: rotate(-28deg);
+  }
+  75% {
+    transform: rotate(28deg);
+  }
+}
+
+@keyframes msgFirst {
+  0%, 25%, 75.001%, 100% { opacity: 1; }
+  25.001%, 75% { opacity: 0; }
+}
+
+@keyframes msgSecond {
+  0%, 25%, 75.001%, 100% { opacity: 0; }
+  25.001%, 75% { opacity: 1; }
+}
+
+@layer utilities {
+  .animate-rotate {
+    animation: rotate 9s infinite linear;
+  }
+  .animate-msgFirst {
+    animation: msgFirst 9s infinite linear;
+  }
+  .animate-msgSecond {
+    animation: msgSecond 9s infinite linear;
+  }
+}
+
+
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

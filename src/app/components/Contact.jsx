@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import YandexMap from "./yandex-maps"
 
 export default function Contact() {
   return (
@@ -22,7 +23,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Phone</div>
-                    <div className="text-gray-600">+1 (555) 123-4567</div>
+                    <div className="text-gray-600">+998-78-150-00-57</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -31,7 +32,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Email</div>
-                    <div className="text-gray-600">info@toptech.com</div>
+                    <div className="text-gray-600">contact@enera.uz</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -40,15 +41,18 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Address</div>
-                    <div className="text-gray-600">123 Tech Street, Silicon Valley, CA 94000</div>
+                    <div className="text-gray-600">Tashkent, Bunyodkor prospekt, 47</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
-              <div className="text-gray-500">Interactive Map</div>
-            </div>
+            <YandexMap
+              center={[41.253032, 69.189723]} 
+              zoom={12}
+              height="256px"
+              className="shadow-md"
+            />
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-lg">

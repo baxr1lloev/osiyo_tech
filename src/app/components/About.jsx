@@ -40,21 +40,27 @@ export default function About() {
               <div className="text-center">
                 <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900">
-                  <Counter targetNumber={50} suffix="+" />
+                  <Counter 
+                  whileInView={{ opacity: 1 }}
+                  targetNumber={50} suffix="+" />
                 </div>
                 <div className="text-gray-600">Team Members</div>
               </div>
               <div className="text-center">
                 <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900">
-                  <Counter targetNumber={15} suffix="+" />
+                  <Counter 
+                  whileInView={{ opacity: 1 }}
+                  targetNumber={15} suffix="+" />
                 </div>
                 <div className="text-gray-600">Awards Won</div>
               </div>
               <div className="text-center">
                 <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900">
-                  <Counter targetNumber={10} suffix="+" />
+                  <Counter 
+                  whileInView={{ opacity: 1 }}
+                  targetNumber={10} suffix="+" />
                 </div>
                 <div className="text-gray-600">Years Experience</div>
               </div>
