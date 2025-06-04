@@ -18,7 +18,7 @@ export default function Header() {
             alt="OsiyoTech Logo" 
             width={60} 
             height={60} 
-            className="h-14 w-18 mr-3 rounded-lg cursor-pointer"
+            className="h-14 w-18 mr-3  cursor-pointer"
             onClick={() => window.location.reload()}
              />
              {/* <img
