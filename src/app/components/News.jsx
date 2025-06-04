@@ -156,7 +156,7 @@ export default function News() {
       author: "Kirillov Vladimir",
       category: "Technology",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop",
+      image: "https://unsplash.com/photos/young-serious-engineer-in-workwear-and-hardhat-scrolling-through-technical-data-in-digital-tablet-by-one-of-industrial-machines-ddjbv1dUcpo?w=800&h=400&fit=crop",
       tags: ["Digital Twin", "Predictive Maintenance", "Industry 4.0"],
       department: "industrial-digitalization",
       departmentName: "Industrial Digitalization",

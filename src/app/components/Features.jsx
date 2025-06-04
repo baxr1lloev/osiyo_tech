@@ -64,7 +64,7 @@ export default function Features() {
             viewport={{ once: true, amount: 0.3 }}
             className="text-3xl sm:text-4xl font-bold text-white dark:text-gray-100 mb-4"
           >
-            Why Choose TopTech?
+            Why Choose OsiyoTech?
           </motion.h2>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
