@@ -13,13 +13,20 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Image
-              src="/osiyi.jpg"
-              alt="OsiyoTech Logo"
-              width={60}
-              height={60}
-              className="h-14 w-18 mr-3 rounded-lg"
-            />
+            {/* <Image 
+            src="../osiyotech.png" 
+            alt="OsiyoTech Logo" 
+            width={70} 
+            height={70} 
+            className="h-14 w-18 mr-3 rounded-lg" /> */}
+            <div>
+              <img
+                className="h-[60px] w-[70px] mr-3 rounded-lg cursor-pointer"
+                src="/osiyotech-bg.png"
+                alt="Reload site"
+                onClick={() => window.location.reload()}
+              />
+            </div>
           </div>
 
           <nav className="hidden md:flex space-x-8">

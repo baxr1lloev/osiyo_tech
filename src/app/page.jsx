@@ -8,6 +8,8 @@ import Features from "./components/Features"
 import Department from "./components/Department"
 import News from "./components/News"
 
+
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -16,7 +18,7 @@ export default function Home() {
       <About />
       <Services />
       <Features />
-      <News/>
+      <News />
       <Department />
       <Contact />
       <Footer />

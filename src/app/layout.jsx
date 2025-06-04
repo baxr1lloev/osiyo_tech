@@ -1,32 +1,67 @@
-import { Inter } from "next/font/google"
-import { ThemeProvider } from "./contexts/theme-context"
 import "./globals.css"
-
-
-const inter = Inter({ subsets: ["latin"] })
+import { ThemeProvider } from "./components/theme-provider"
 
 export const metadata = {
-  title: "OsiyoTech - Your IT Solutions Partner",
-  description: "Leading IT solutions provider in Uzbekistan",
-  icons: {
-    icon: "./osiyi.jpg", 
-    apple: "./osiyi.jpg",
-    shortcut: "./osiyi.jpg",
-  },
+  title: "OsiyoTech",
+  description: "Technology solutions and services",
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="favicon.ico" />
-        <link rel="apple-touch-icon" href="/osiyi.jpg" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
-          rel="stylesheet"
+        {/* Add script to detect and apply system theme immediately */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Check if user has a saved preference
+                const savedTheme = localStorage.getItem('theme');
+                
+                // If user prefers system or has no preference, check system
+                if (!savedTheme || savedTheme === 'system') {
+                  // Check system preference
+                  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  
+                  // Apply theme immediately to prevent flash
+                  if (systemDark) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                  }
+                } else {
+                  // Apply saved preference
+                  if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                  }
+                }
+                
+                // Set up listener for system changes
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                mediaQuery.addEventListener('change', (e) => {
+                  // Only apply if user prefers system
+                  if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'system') {
+                    if (e.matches) {
+                      document.documentElement.classList.add('dark');
+                      document.documentElement.style.colorScheme = 'dark';
+                    } else {
+                      document.documentElement.classList.remove('dark');
+                      document.documentElement.style.colorScheme = 'light';
+                    }
+                  }
+                });
+              })();
+            `,
+          }}
         />
       </head>
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <body className="font-sans">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

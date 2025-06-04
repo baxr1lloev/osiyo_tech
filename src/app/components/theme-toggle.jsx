@@ -1,7 +1,7 @@
 "use client"
 
 import { Sun, Moon } from "lucide-react"
-import { useTheme } from "../contexts/theme-context"
+import { useTheme } from "./theme-provider"
 
 export default function ThemeToggle() {
   const { isDarkMode, toggleDarkMode, mounted } = useTheme()
@@ -14,9 +14,14 @@ export default function ThemeToggle() {
     )
   }
 
+  const handleToggle = () => {
+    console.log("Toggle button clicked, current mode:", isDarkMode)
+    toggleDarkMode()
+  }
+
   return (
     <button
-      onClick={toggleDarkMode}
+      onClick={handleToggle}
       className="relative inline-flex items-center justify-center w-12 h-6 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
     >

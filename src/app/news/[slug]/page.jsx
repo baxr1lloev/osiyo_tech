@@ -1165,7 +1165,7 @@ export default function ArticlePage() {
                 </span>
                 {article.department && (
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                    <Building2 className="w-3 h-3" />
+                    <Building2 className="w-3 h-3   " />
                     {article.departmentName}
                   </span>
                 )}
@@ -1235,7 +1235,7 @@ export default function ArticlePage() {
                 {article.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                    className="px-3 py-1 bg-gray-100 font-bold select-none dark:bg-gray-800 text-black cursor-pointer dark:text-gray-300 rounded-full text-sm"
                   >
                     {tag}
                   </span>
@@ -1243,9 +1243,9 @@ export default function ArticlePage() {
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Interested in Our Services?</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+            <div className="mt-12 p-6 bg-blue-50 dark:bg-gray-900 shadow-lg dark:shadow-gray-800/50  rounded-xl">
+              <h3 className="text-xl font-bold   dark:text-black  text-black mb-2">Interested in Our Services?</h3>
+              <p className="text-black select-none cursor-pointer dark:text-black mb-4">
                 Contact us today to learn more about how OsiyoTech can help transform your business with cutting-edge
                 technology solutions.
               </p>

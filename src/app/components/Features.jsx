@@ -1,7 +1,5 @@
-"use client";
-
-import { Zap, Shield, Headphones, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
+"use client"
+import { motion } from "framer-motion"
 
 export default function Features() {
   const features = [
@@ -56,7 +54,7 @@ export default function Features() {
   }
 
   return (
-    <section id="solutions" className="py-20 bg-blue-600">
+    <section id="solutions" className="py-20 bg-blue-600 dark:bg-blue-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <motion.h2
@@ -64,7 +62,7 @@ export default function Features() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-white dark:text-gray-100 mb-4"
           >
             Why Choose TopTech?
           </motion.h2>
@@ -73,7 +71,7 @@ export default function Features() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl text-blue-100 dark:text-blue-200 max-w-3xl mx-auto"
           >
             We deliver exceptional value through innovative technology solutions
           </motion.p>
@@ -97,7 +95,7 @@ export default function Features() {
               }}
             >
               <motion.div
-                className="bg-white bg-opacity-10 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300 relative overflow-hidden"
+                className="bg-white bg-opacity-10 dark:bg-white dark:bg-opacity-20 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 dark:group-hover:bg-opacity-30 transition-all duration-300 relative overflow-hidden"
                 whileHover={{
                   rotateY: 15,
                   rotateX: 10,
@@ -127,7 +125,7 @@ export default function Features() {
                 />
               </motion.div>
               <motion.h3
-                className="text-xl font-semibold text-white mb-3"
+                className="text-xl font-semibold text-white dark:text-gray-100 mb-3"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.2 + index * 0.1 }}
@@ -136,7 +134,7 @@ export default function Features() {
                 {feature.title}
               </motion.h3>
               <motion.p
-                className="text-blue-100 leading-relaxed"
+                className="text-blue-100 dark:text-blue-200 leading-relaxed"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 + index * 0.1 }}

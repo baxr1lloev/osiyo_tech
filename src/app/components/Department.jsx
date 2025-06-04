@@ -1,8 +1,3 @@
-// import TeamSwiper from "./team-swiper"
-
-// export default function Department() {
-//   return <TeamSwiper />
-// }
 
 "use client"
 
