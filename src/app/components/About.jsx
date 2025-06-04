@@ -15,9 +15,9 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white">About TopTech Solutions</h2>
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white">About OsiyoTech Solutions</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                With over a decade of experience in the IT industry, TopTech Solutions has been at the forefront of
+                With over a decade of experience in the IT industry, OsiyoTech Solutions has been at the forefront of
                 digital transformation. We help businesses leverage technology to achieve their goals and stay
                 competitive in today's fast-paced market.
               </p>

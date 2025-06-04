@@ -9,7 +9,6 @@ export default function ThemeToggle() {
   const [isSystemDark, setIsSystemDark] = useState(false)
   const [forceUpdate, setForceUpdate] = useState(0)
 
-  // Track system theme changes for better visual feedback
   useEffect(() => {
     if (!mounted) return
 
@@ -17,17 +16,16 @@ export default function ThemeToggle() {
 
     const updateSystemTheme = () => {
       setIsSystemDark(mediaQuery.matches)
-      // Force re-render when system theme changes
       setForceUpdate((prev) => prev + 1)
     }
 
-    // Set initial state
+
     updateSystemTheme()
 
-    // Listen for changes
+
     mediaQuery.addEventListener("change", updateSystemTheme)
 
-    // Listen for theme changes from other components
+
     const handleThemeChange = () => {
       setForceUpdate((prev) => prev + 1)
     }
@@ -40,7 +38,6 @@ export default function ThemeToggle() {
     }
   }, [mounted])
 
-  // Show a simple loading state
   if (!mounted) {
     return (
       <div className="w-12 h-6 bg-gray-200 rounded-full animate-pulse">
@@ -54,7 +51,6 @@ export default function ThemeToggle() {
     toggleDarkMode()
   }
 
-  // Determine which icon to show based on resolved theme
   const getIcon = () => {
     if (theme === "system") {
       return <Monitor className="w-2.5 h-2.5 text-blue-600" />
@@ -66,20 +62,17 @@ export default function ThemeToggle() {
     )
   }
 
-  // Determine toggle position based on resolved theme
   const getTogglePosition = () => {
     if (theme === "system") {
-      return "translate-x-3" // Middle position
+      return "translate-x-3" 
     }
     return resolvedTheme === "dark" ? "translate-x-6" : "translate-x-0"
   }
 
-  // Determine background color based on resolved theme (not theme preference)
   const getBackgroundColor = () => {
     return resolvedTheme === "dark" ? "bg-gray-700" : "bg-gray-200"
   }
 
-  // Determine toggle knob color based on resolved theme
   const getKnobColor = () => {
     return resolvedTheme === "dark" ? "bg-gray-200" : "bg-white"
   }
@@ -101,7 +94,7 @@ export default function ThemeToggle() {
             ? `Following system (${resolvedTheme} mode)`
             : `${resolvedTheme === "dark" ? "Dark" : "Light"} mode`
         }
-        key={`toggle-${forceUpdate}-${resolvedTheme}`} // Force re-render when theme changes
+        key={`toggle-${forceUpdate}-${resolvedTheme}`} 
       >
         <span
           className={`absolute left-1 top-1 w-4 h-4 ${getKnobColor()} rounded-full shadow-md transform transition-all duration-300 flex items-center justify-center ${getTogglePosition()}`}
@@ -110,7 +103,6 @@ export default function ThemeToggle() {
         </span>
       </button>
 
-      {/* Optional: Show current mode text */}
       <span className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">
         {theme === "system" ? `Auto (${resolvedTheme})` : theme}
         {theme === "system" && <span className="ml-1">{isSystemDark ? "🌙" : "☀️"}</span>}

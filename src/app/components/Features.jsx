@@ -1,5 +1,5 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 
 export default function Features() {
   const features = [
@@ -23,7 +23,7 @@ export default function Features() {
       title: "Scalable Solutions",
       description: "Solutions that grow with your business needs",
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,7 +34,7 @@ export default function Features() {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: {
@@ -51,26 +51,32 @@ export default function Features() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
-    <section id="solutions" className="py-20 bg-blue-600 dark:bg-blue-800 transition-colors duration-300">
+    <section
+      id="solutions"
+      className="py-20 bg-blue-600 dark:bg-blue-800 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <motion.h2
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            variants={{hidden: { y: 50, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.3, once: false }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
             className="text-3xl sm:text-4xl font-bold text-white dark:text-gray-100 mb-4"
           >
             Why Choose OsiyoTech?
           </motion.h2>
+
           <motion.p
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            variants={{hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.3, once: false }}
             transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true, amount: 0.3 }}
             className="text-lg sm:text-xl text-blue-100 dark:text-blue-200 max-w-3xl mx-auto"
           >
             We deliver exceptional value through innovative technology solutions
@@ -82,13 +88,16 @@ export default function Features() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ amount: 0.2, once: false }}
         >
           {features.map((feature, index) => (
             <motion.div
               key={index}
               className="text-center group"
               variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.2, once: false }}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 },
@@ -102,8 +111,10 @@ export default function Features() {
                 }}
                 style={{
                   transformStyle: "preserve-3d",
-                  background: "linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05))",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)",
+                  background:
+                    "linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05))",
+                  boxShadow:
+                    "0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)",
                   backdropFilter: "blur(10px)",
                   border: "1px solid rgba(255,255,255,0.1)",
                 }}
@@ -120,25 +131,28 @@ export default function Features() {
                 <div
                   className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
-                    background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%)",
+                    background:
+                      "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%)",
                   }}
                 />
               </motion.div>
               <motion.h3
                 className="text-xl font-semibold text-white dark:text-gray-100 mb-3"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2, once: false }}
                 transition={{ delay: 0.2 + index * 0.1 }}
-                viewport={{ once: true }}
               >
                 {feature.title}
               </motion.h3>
               <motion.p
                 className="text-blue-100 dark:text-blue-200 leading-relaxed"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2, once: false }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                viewport={{ once: true }}
               >
                 {feature.description}
               </motion.p>
@@ -147,5 +161,5 @@ export default function Features() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

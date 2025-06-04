@@ -12,21 +12,21 @@ export default function Header() {
     <header className="bg-white dark:bg-gray-900 shadow-lg dark:shadow-gray-800/50 fixed w-full top-0 z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            {/* <Image 
-            src="../osiyotech.png" 
+          <div className="flex items-center justify-center">
+            <Image 
+            src="/osiyi-removebg.png" 
             alt="OsiyoTech Logo" 
-            width={70} 
-            height={70} 
-            className="h-14 w-18 mr-3 rounded-lg" /> */}
-            <div>
-              <img
+            width={60} 
+            height={60} 
+            className="h-14 w-18 mr-3 rounded-lg cursor-pointer"
+            onClick={() => window.location.reload()}
+             />
+             {/* <img
                 className="h-[60px] w-[70px] mr-3 rounded-lg cursor-pointer"
                 src="/osiyotech-bg.png"
                 alt="Reload site"
                 onClick={() => window.location.reload()}
-              />
-            </div>
+              /> */}
           </div>
 
           <nav className="hidden md:flex space-x-8">

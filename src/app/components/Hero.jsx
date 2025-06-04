@@ -9,12 +9,9 @@ import { useEffect, useState } from "react"
 export default function Hero() {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
-  // Listen for theme changes
   useEffect(() => {
-    // Check initial theme
     setIsDarkMode(document.documentElement.classList.contains("dark"))
 
-    // Create a mutation observer to watch for class changes on html element
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === "class") {
@@ -23,10 +20,10 @@ export default function Hero() {
       })
     })
 
-    // Start observing
+
     observer.observe(document.documentElement, { attributes: true })
 
-    // Listen for theme change events
+
     const handleThemeChange = () => {
       setIsDarkMode(document.documentElement.classList.contains("dark"))
     }
