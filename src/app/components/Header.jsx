@@ -14,7 +14,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center justify-center">
             <Image 
-            src="/osiyi-removebg.png" 
+            src="/osiyotech1.svg" 
             alt="OsiyoTech Logo" 
             width={60} 
             height={60} 

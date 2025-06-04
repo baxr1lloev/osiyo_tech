@@ -63,16 +63,16 @@ const AreaChartComponent = () => {
         <Area
           type="monotone"
           dataKey="product1"
-          stroke="#2563eb"
-          fill="#3b82f6"
+          stroke="#827588"
+          fill="#827588"
           stackId="1"
         />
 
         <Area
           type="monotone"
           dataKey="product2"
-          stroke="#7c3aed"
-          fill="#8b5cf6"
+          stroke="#92a2a2"
+          fill="#92a2a2"
           stackId="1"
         />
       </AreaChart>
@@ -89,7 +89,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           Product 1:
           <span className="ml-2">${payload[0].value}</span>
         </p>
-        <p className="text-sm text-indigo-400">
+        <p className="text-sm text-[#1A428A]">
           Product 2:
           <span className="ml-2">${payload[1].value}</span>
         </p>
