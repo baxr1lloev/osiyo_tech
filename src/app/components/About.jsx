@@ -54,7 +54,7 @@ export default function About() {
               <div className="text-center">
                 <Clock className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  <Counter whileInView={{ opacity: 1 }} targetNumber={10} suffix="+" />
+                  <Counter whileInView={{ opacity: 1 }} targetNumber={2} suffix="+" />
                 </div>
                 <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
               </div>
